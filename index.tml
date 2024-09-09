@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopUp Lagi</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Menghubungkan file CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>TopUp Lagi</h1>
+        
+        <!-- Form untuk top-up pulsa -->
+        <form id="topupForm" action="topup.php" method="POST">
+            <!-- Input Nomor Telepon -->
+            <label for="nomor">Nomor Telepon:</label>
+            <input type="text" id="nomor" name="nomor" placeholder="Masukkan nomor telepon" required>
+            
+            <!-- Pilih Operator -->
+            <label for="operator">Operator:</label>
+            <select id="operator" name="operator" required>
+                <option value="">Pilih Operator</option>
+                <option value="telkomsel">Telkomsel</option>
+                <option value="xl">XL</option>
+                <option value="indosat">Indosat</option>
+                <option value="tri">Tri</option>
+            </select>
+            
+            <!-- Pilih Nominal -->
+            <label for="nominal">Nominal Pulsa:</label>
+            <select id="nominal" name="nominal" required>
+                <option value="">Pilih Nominal</option>
+                <option value="10000">Rp 12,000</option>
+                <option value="25000">Rp 27,000</option>
+                <option value="50000">Rp 52,000</option>
+                <option value="100000">Rp 102,000</option>
+            </select>
+
+            <!-- Pilih Metode Pembayaran -->
+            <label for="payment">Metode Pembayaran:</label>
+            <select id="payment" name="payment" required>
+                <option value="">Pilih Metode Pembayaran</option>
+                <option value="bank_transfer">Bank Transfer</option>
+                <option value="credit_card">Kartu Kredit</option>
+                <option value="e_wallet">E-Wallet (OVO, GoPay, Dana)</option>
+            </select>
+            
+            <!-- Tombol Submit -->
+            <button type="submit">Top Up Sekarang</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script> <!-- Menghubungkan file JavaScript -->
+</body>
+</html>
